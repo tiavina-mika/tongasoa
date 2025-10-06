@@ -1,5 +1,5 @@
 {
-  "name": "hello-world-lib",
+  "name": "tongasoa",
   "version": "0.1.0",
   "description": "A React Hello World library (Vite, TypeScript, ESM)",
   "main": "dist/index.cjs.js",

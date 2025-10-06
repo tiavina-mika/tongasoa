@@ -1,2 +1,2 @@
-export { default as HelloWorld } from '@/HelloWorld';
-export type { HelloWorldProps } from '@/types/types';
+export { default as Tongasoa } from '@/Tongasoa';
+export type { TongasoaProps as HelloWorldProps } from '@/types/types';
