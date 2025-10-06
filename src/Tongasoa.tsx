@@ -1,7 +1,14 @@
 import type { TongasoaProps } from './types';
+import './index.css';
+import Title from './components/Title';
 
 const Tongasoa = ({ name = 'World' }: TongasoaProps) => {
-  return <div>Hello {name}!</div>;
+  return (
+    <div>
+      <Title />
+      <h2>Welcome to {name}!</h2>
+    </div>
+  );
 };
 
 export default Tongasoa;
