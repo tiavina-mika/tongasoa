@@ -1,4 +1,4 @@
-import type { TongasoaProps } from './types/types';
+import type { TongasoaProps } from './types';
 
 const Tongasoa = ({ name = 'World' }: TongasoaProps) => {
   return <div>Hello {name}!</div>;

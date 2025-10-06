@@ -18,7 +18,7 @@ export default defineConfig({
     emptyOutDir: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'HelloWorldReact',
+      name: 'Tongasoa',
       fileName: (format) => `index.${format}.js`,
       formats: ['es', 'cjs'],
     },
