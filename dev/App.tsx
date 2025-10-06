@@ -1,7 +1,7 @@
-import { HelloWorld } from '../src';
+import { Tongasoa } from '../src';
 
 const App = () => {
-  return <HelloWorld name="Vite + React" />;
+  return <Tongasoa name="Vite + React" />;
 }
 
 export default App;
