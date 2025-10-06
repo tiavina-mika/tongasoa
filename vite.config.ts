@@ -29,6 +29,15 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
+        assetFileNames: (assetInfo) => {
+          if (
+            Array.isArray(assetInfo.names) &&
+            assetInfo.names.some((n) => n.endsWith('.css'))
+          ) {
+            return 'index.css';
+          }
+          return '[name][extname]';
+        },
       },
     },
   },
