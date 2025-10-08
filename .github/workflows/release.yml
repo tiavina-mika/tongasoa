@@ -27,10 +27,10 @@ jobs:
   # Build the project after commit linting is successful
   build:
     runs-on: ubuntu-latest
-    if: |
-      github.event_name == 'push' &&
-      github.ref == 'refs/heads/main' &&
-      github.event.workflow_run.conclusion == 'success'
+    # if: |
+    #   github.event_name == 'push' &&
+    #   github.ref == 'refs/heads/main' &&
+    #   github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
