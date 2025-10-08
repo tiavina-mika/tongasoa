@@ -53,7 +53,7 @@ jobs:
 
       - name: Publish package on NPM 📦
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub authentication
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }} # GitHub authentication
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }} # npm authentication
         run: npx semantic-release # Run semantic-release for versioning and publishing
       - run: echo "Published to NPM 🚀- https://www.npmjs.com/package/${{ github.event.repository.name }}"
