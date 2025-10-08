@@ -1,4 +1,5 @@
-name: 🧩 Commit & PR Lint
+name: Commit & PR Lint
+run-name: ${{ github.actor }} commit & PR Lint 🧩
 
 on:
   pull_request:
