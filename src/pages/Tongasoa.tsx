@@ -1,8 +1,8 @@
 
 import type { TongasoaProps } from '../types';
 import '../styles/index.css';
-import Title from '../components/Title';
-import reactLogo from '../assets/react.svg';
+import Title from '@/components/Title';
+import reactLogo from '@/assets/react.svg';
 
 const Tongasoa = ({ name = 'World' }: TongasoaProps) => {
   return (

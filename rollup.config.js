@@ -38,6 +38,8 @@ export default [
                 include: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.gif', '**/*.woff2', '**/*.woff', '**/*.ttf'],
                 limit: 8192, // inline files < 8kb
                 emitFiles: true,
+                // Note: not using extname to keep original extensions since it's a .mjs extension
+                fileName: '[dirname][name]',
             }),
             css({ minify: true }),
             peerDepsExternal(),
