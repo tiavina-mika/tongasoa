@@ -6,38 +6,56 @@ on:
       - main
 
 jobs:
-  release:
+  # Build the project after commit linting is successful
+  build:
     runs-on: ubuntu-latest
-    # Wait for commitlint job to complete successfully
     needs: commitlint
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Full history required for semantic-release
+          fetch-depth: 0
 
-        # Set up Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install Yarn 4
+        run: corepack enable && corepack prepare yarn@4 --activate
+
+      - name: Install dependencies
+        run: yarn install --immutable
+
+      - name: Build project
+        run: yarn build
+
+  release:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           registry-url: 'https://registry.npmjs.org/'
 
-        # Set up Yarn 4
       - name: Install Yarn 4
         run: corepack enable && corepack prepare yarn@4 --activate
 
-        # Set up project dependencies
       - name: Install dependencies
         run: yarn install --immutable
 
-        # Publish package on NPM using semantic-release
       - name: Publish package on NPM 📦
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
-        # Show NPM package link
       - name: Show NPM package link
         run: echo "Published to NPM 🚀- https://www.npmjs.com/package/${{ github.event.repository.name }}"
