@@ -1,3 +1,5 @@
+# This workflow lints commit messages and PR titles to ensure they follow Conventional Commits.
+# If the linting is successful, it triggers the release workflow (see .github/workflows/release.yml).
 name: Commit & PR Lint
 run-name: ${{ github.actor }} commit & PR Lint 🧩
 
