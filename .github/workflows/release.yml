@@ -15,6 +15,7 @@ on:
   workflow_run:
     # the workflow we want to trigger this workflow (see .github/workflows/commitlint.yml)
     workflows: [Commit & PR Lint]
+    # we only want to run this workflow when the Commit & PR Lint workflow is successful
     types: [completed]
 
 
