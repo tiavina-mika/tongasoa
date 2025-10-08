@@ -14,9 +14,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite --config vite.config.ts dev",
-    "build": "vite build --config vite.config.ts",
-    "build-dist": "rollup -c rollup.config.js",
-    "//build-dist": "rollup --bundleConfigAsCjs -c rollup.config.js",
+    "build:dev": "vite build --config vite.config.ts",
+    "build": "rollup -c rollup.config.js",
     "test": "jest",
     "lint": "eslint . --ext .ts,.tsx",
     "prepare": "husky install",
