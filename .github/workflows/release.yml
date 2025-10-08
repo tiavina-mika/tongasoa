@@ -2,9 +2,12 @@ name: Release & Publish
 run-name: ${{ github.actor }} release & publish to npm 🚀
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
+  # Trigger the workflow only when the PR is merged
+  # types: [merged]
 
 
   # we are using workflow_run to trigger the workflow
@@ -13,21 +16,21 @@ on:
   # so we do not use the release event
   # issue: https://github.com/orgs/community/discussions/25281
   # see: https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#workflow_run
-  workflow_run:
-    # the workflow we want to trigger this workflow (see .github/workflows/commitlint.yml)
-    workflows: [Commit & PR Lint]
-    # we only want to run this workflow when the Commit & PR Lint workflow is successful
-    types: [completed]
+  # workflow_run:
+  #   # the workflow we want to trigger this workflow (see .github/workflows/commitlint.yml)
+  #   workflows: [Commit & PR Lint]
+  #   # we only want to run this workflow when the Commit & PR Lint workflow is successful
+  #   types: [completed]
 
 
 jobs:
   # Build the project after commit linting is successful
   build:
     runs-on: ubuntu-latest
-    if: |
-      github.event_name == 'push' &&
-      github.ref == 'refs/heads/main' &&
-      github.event.workflow_run.conclusion == 'success'
+    # if: |
+    #   github.event_name == 'push' &&
+    #   github.ref == 'refs/heads/main' &&
+    #   github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
