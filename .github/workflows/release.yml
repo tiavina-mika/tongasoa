@@ -33,6 +33,10 @@ jobs:
       - name: Build project
         run: yarn build
 
+      # display dist directory contents for debugging
+      - name: Show dist directory contents (debug)
+        run: ls -l dist
+
   release:
     runs-on: ubuntu-latest
     # Semantic-release needs write permissions to create releases
