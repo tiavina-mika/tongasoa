@@ -31,7 +31,7 @@ jobs:
       - name: Validate Conventional Commits
         uses: wagoid/commitlint-github-action@v6
         with:
-          configFile: commitlint.config.js # Use local commitlint config
+          configFile: commitlint.config.mjs # Use local commitlint config
 
         # Allowed semantic PR types
       - name: Validate PR title
