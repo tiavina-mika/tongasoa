@@ -20,9 +20,7 @@ export default {
       ],
     ],
     // Enforces that the commit subject uses sentence case
-    // e.g: "fix: Correct typo"
-    // NOTE: This rule is working with github actions amannn/action-semantic-pull-request plugin
-    'subject-case': [2, 'always'],
+    'subject-case': [0],
     // Disables max line length for the commit body
     'body-max-line-length': [0],
     // Disables max line length for the commit footer
