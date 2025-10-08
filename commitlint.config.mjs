@@ -4,6 +4,7 @@ export default {
     // Enforces allowed commit types (e.g., feat, fix, docs, etc.)
     'type-enum': [
       2, // Error level: 2 = error, 1 = warning, 0 = off
+      'always',
       // Always apply this rule
       [
         'feat', // New feature (major or minor changes, e.g., adding a new component)
