@@ -2,6 +2,15 @@
   "name": "tongasoa",
   "version": "0.1.0",
   "description": "A React Hello World library",
+  "homepage": "https://github.com/tiavina-mika/tongasoa",
+  "bugs": {
+    "url": "https://github.com/tiavina-mika/tongasoa/issues"
+  },
+  "author": {
+    "name": "Tiavina Michael Ralainirina",
+    "email": "tiavinamika@gmail.com",
+    "github": "https://github.com/tiavina-mika"
+  },
   "main": "dist/index.esm.js",
   "module": "dist/index.esm.js",
   "types": "dist/types/index.d.ts",
@@ -66,5 +75,8 @@
     "vite": "^7.1.9",
     "vite-plugin-dts": "^4.5.4",
     "vite-tsconfig-paths": "^5.1.4"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
