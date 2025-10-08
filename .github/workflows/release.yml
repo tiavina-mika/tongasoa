@@ -59,6 +59,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      - name: Show directory structure (debug)
+        run: |
+          pwd
+          ls -l
+
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
         env:
