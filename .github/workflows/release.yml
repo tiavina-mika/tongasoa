@@ -6,6 +6,7 @@ on:
     branches:
       - main
 
+
   # we are using workflow_run to trigger the workflow
   # because we want to run this workflow only when the Commit & PR Lint workflow is completed
   # GitHub prevents workflows from running on events that were caused by other workflows to prevent unlimited recursion
@@ -23,6 +24,10 @@ jobs:
   # Build the project after commit linting is successful
   build:
     runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'push' &&
+      github.ref == 'refs/heads/main' &&
+      github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -74,4 +79,3 @@ jobs:
       # Optional: Show the NPM package link after publishing
       - name: Show NPM package link
         run: echo "Published to NPM 🚀- https://www.npmjs.com/package/${{ github.event.repository.name }}"
-        
