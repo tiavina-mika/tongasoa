@@ -50,6 +50,9 @@ jobs:
             chore
             revert
             BREAKING CHANGE
+          githubBaseUrl: https://api.github.com
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Publish package on NPM 📦
         env:
