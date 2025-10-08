@@ -51,11 +51,13 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
+      # Optional: Show the NPM package link after publishing
       - name: Show NPM package link
         run: echo "Published to NPM 🚀- https://www.npmjs.com/package/${{ github.event.repository.name }}"
