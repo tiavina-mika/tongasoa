@@ -7,7 +7,7 @@ run-name: Release & publish to npm by ${{ github.actor }} 🚀
 on:
   push:
     branches:
-      - main
+      - release
 
 jobs:
   # Build the project after commit linting is successful
