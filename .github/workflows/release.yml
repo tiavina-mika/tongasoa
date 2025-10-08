@@ -33,8 +33,14 @@ jobs:
       - name: Build project
         run: yarn build
 
+      # display dist directory contents for debugging
+      - name: Show dist directory contents (debug)
+        run: ls -l dist
+
   release:
     runs-on: ubuntu-latest
+    # Semantic-release needs write permissions to create releases
+    # and to comment on issues and pull requests
     permissions:
       contents: write # to be able to publish a GitHub release
       issues: write # to be able to comment on released issues
@@ -58,11 +64,6 @@ jobs:
 
       - name: Install dependencies
         run: yarn install --immutable
-
-      - name: Show directory structure (debug)
-        run: |
-          pwd
-          ls -l
 
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
