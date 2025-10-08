@@ -41,9 +41,7 @@
             "changelogTitle": "# Changelog"
         }],
         ["@semantic-release/npm", {
-            "npmPublish": false,
-            "tarballDir": "dist",
-            "pkgRoot": "dist"
+            "npmPublish": true
         }],
         ["@semantic-release/git", {
             "assets": ["package.json", "CHANGELOG.md"],
