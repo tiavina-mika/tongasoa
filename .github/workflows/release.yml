@@ -42,24 +42,9 @@ jobs:
           # For cross OS archive compatibility (Linux, Windows, Mac)
           enableCrossOsArchive: true
       
-        # show if cache was hit
-      - name: Show Yarn cache status
-        run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
-      - name: Show .yarn directory contents (debug)
-        run: ls -l .yarn
-      - name: Show directory contents (debug)
-        run: ls -l
-
       - name: Install dependencies
-        # if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
-      - name: Show Yarn cache status
-        run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
-      - name: Show .yarn directory contents (debug)
-        run: ls -l .yarn
-      - name: Show directory contents (debug)
-        run: ls -l
 
       - name: Build project
         run: yarn build
@@ -75,10 +60,6 @@ jobs:
           path: dist/
           # Using compression-level 0 to speed up the upload process
           compression-level: 0
-
-      # display dist directory contents for debugging
-      - name: Show dist directory contents (debug)
-        run: ls -l dist
 
   # Release job to publish the package to NPM
   release:
@@ -122,17 +103,8 @@ jobs:
           # For cross OS archive compatibility (Linux, Windows, Mac)
           enableCrossOsArchive: true
 
-      # show if cache was hit
-      - name: Show Yarn cache status
-        run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
-
       - name: Install dependencies
-        # if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
-
-      # show if cache was hit
-      - name: Show Yarn cache status
-        run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
 
       - name: Download build artifact
         uses: actions/download-artifact@v4
