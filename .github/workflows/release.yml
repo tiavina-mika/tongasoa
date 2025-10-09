@@ -65,6 +65,10 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      # display dist directory contents for debugging
+      - name: Show dist directory  2 (debug)
+        run: ls -l
+
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
         env:
