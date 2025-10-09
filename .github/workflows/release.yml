@@ -51,7 +51,7 @@ jobs:
         run: ls -l
 
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        # if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
 
       - name: Show Yarn cache status
@@ -60,7 +60,7 @@ jobs:
         run: ls -l .yarn
       - name: Show directory contents (debug)
         run: ls -l
-        
+
       - name: Build project
         run: yarn build
 
