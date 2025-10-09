@@ -19,6 +19,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -49,10 +54,23 @@ jobs:
       - name: Build project
         run: yarn build
 
+      # To make the build output available for the other jobs (e.g., release job)
+      # So that the other job (e.g., release job) does not need to rebuild the project
+      # For faster release process
+      # Use case: download /dist, then download /dist in other job so no need to rebuild
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist
+          # Using compression-level 0 to speed up the upload process
+          compression-level: 0
+
       # display dist directory contents for debugging
       - name: Show dist directory contents (debug)
         run: ls -l dist
 
+  # Release job to publish the package to NPM
   release:
     runs-on: ubuntu-latest
     # Semantic-release needs write permissions to create releases
@@ -64,6 +82,7 @@ jobs:
       id-token: write # to enable use of OIDC for npm provenance
     needs: build
     steps:
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -96,9 +115,15 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+
       # display dist directory contents for debugging
-      - name: Show dist directory  2 (debug)
-        run: ls -l
+      - name: Show dist directory contents (debug)
+        run: ls -l dist/
 
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
