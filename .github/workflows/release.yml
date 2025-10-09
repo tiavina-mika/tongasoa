@@ -42,9 +42,16 @@ jobs:
           # For cross OS archive compatibility (Linux, Windows, Mac)
           enableCrossOsArchive: true
       
+        # show if cache was hit
+      - name: Show Yarn cache status
+        run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
+
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
+
+      - name: Show Yarn cache status
+        run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
 
       - name: Build project
         run: yarn build
@@ -107,9 +114,17 @@ jobs:
           # For cross OS archive compatibility (Linux, Windows, Mac)
           enableCrossOsArchive: true
 
+      # show if cache was hit
+      - name: Show Yarn cache status
+        run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
+
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
+        # if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
+
+      # show if cache was hit
+      - name: Show Yarn cache status
+        run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
 
       - name: Download build artifact
         uses: actions/download-artifact@v4
