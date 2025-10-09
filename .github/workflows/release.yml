@@ -45,6 +45,10 @@ jobs:
         # show if cache was hit
       - name: Show Yarn cache status
         run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
+      - name: Show .yarn directory contents (debug)
+        run: ls -l .yarn
+      - name: Show directory contents (debug)
+        run: ls -l
 
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
@@ -52,7 +56,11 @@ jobs:
 
       - name: Show Yarn cache status
         run: "echo \"Yarn cache hit: ${{ steps.yarn-cache.outputs.cache-hit }}\""
-
+      - name: Show .yarn directory contents (debug)
+        run: ls -l .yarn
+      - name: Show directory contents (debug)
+        run: ls -l
+        
       - name: Build project
         run: yarn build
 
