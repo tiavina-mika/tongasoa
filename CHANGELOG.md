@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 (2025-10-09)
+
+* feat: ajoute une nouvelle feature ([269e0f1](https://github.com/tiavina-mika/tongasoa/commit/269e0f1))
+* feat: ajoute une nouvelle feature ([8b40df2](https://github.com/tiavina-mika/tongasoa/commit/8b40df2))
+
 ## 1.0.0 (2025-10-09)
 
 * add image ([4d1294f](https://github.com/tiavina-mika/tongasoa/commit/4d1294f))
