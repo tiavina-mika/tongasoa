@@ -34,10 +34,7 @@ jobs:
         id: yarn-cache
         uses: actions/cache@v4
         with:
-          path: |
-            .yarn/cache
-            .yarn/unplugged
-            .yarn/build-state.yml
+          path: 
             .yarn/install-state.gz
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
@@ -46,8 +43,8 @@ jobs:
           enableCrossOsArchive: true
       
       - name: Install dependencies
-        if: steps.yarn-cache.outputs.cache-hit != 'true'
         run: yarn install --immutable
+
 
       - name: Build project
         run: yarn build
@@ -63,10 +60,6 @@ jobs:
           path: dist/
           # Using compression-level 0 to speed up the upload process
           compression-level: 0
-
-      # display dist directory contents for debugging
-      - name: Show dist directory contents (debug)
-        run: ls -l dist
 
   # Release job to publish the package to NPM
   release:
@@ -102,10 +95,7 @@ jobs:
         id: yarn-cache
         uses: actions/cache@v4
         with:
-          path: |
-            .yarn/cache
-            .yarn/unplugged
-            .yarn/build-state.yml
+          path: 
             .yarn/install-state.gz
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
@@ -114,7 +104,6 @@ jobs:
           enableCrossOsArchive: true
 
       - name: Install dependencies
-        if: needs.build.outputs.artifact_exists == 'true'
         run: yarn install --immutable
 
       - name: Download build artifact
