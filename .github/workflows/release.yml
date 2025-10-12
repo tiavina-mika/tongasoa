@@ -139,5 +139,5 @@ jobs:
         run: npx semantic-release
 
       # Optional: Show the NPM package link after publishing
-      - name: Show NPM package link
+      - name: Show NPM package link (DEBUG)
         run: echo "Published to NPM 🚀- https://www.npmjs.com/package/${{ github.event.repository.name }}"
