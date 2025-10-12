@@ -136,10 +136,6 @@ jobs:
           echo "Token length: $(echo -n $NPM_TOKEN | wc -c)"
           npm whoami --registry=https://registry.npmjs.org/ 
       
-      - name: Debug last and release version (DEBUG)
-        env:
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release --dry-run --no-ci | grep -E "(lastRelease|nextRelease)"
       - name: Debug current commit
         run: git rev-parse HEAD && git log --oneline -5 (DEBUG)
 
