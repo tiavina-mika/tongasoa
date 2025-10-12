@@ -16,60 +16,68 @@ const SRC_DIR = path.resolve(process.cwd(), 'src');
 const DIST_DIR = 'dist';
 
 const aliasConfig = alias({
-    entries: [{ find: '@', replacement: SRC_DIR }],
+  entries: [{ find: '@', replacement: SRC_DIR }],
 });
 
 export default [
-    // JS/TS Build
-    {
-        input: 'src/index.ts',
-        output: {
-            dir: DIST_DIR,
-            format: 'esm',
-            entryFileNames: '[name].mjs',
-            preserveModules: true,
-            preserveModulesRoot: 'src',
-            sourcemap: true,
-        },
-        plugins: [
-            clear({ targets: [DIST_DIR], watch: true }),
-            aliasConfig,
-            url({
-                include: ['**/*.svg', '**/*.png', '**/*.jpg', '**/*.gif', '**/*.woff2', '**/*.woff', '**/*.ttf'],
-                limit: 8192, // inline files < 8kb
-                emitFiles: true,
-                // Note: not using extname to keep original extensions since it's a .mjs extension
-                fileName: '[dirname][name]',
-            }),
-            css({ minify: true }),
-            peerDepsExternal(),
-            resolve({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
-            commonjs(),
-            typescript({
-                clean: true,
-                tsconfig: 'tsconfig.build.json',
-                useTsconfigDeclarationDir: true,
-            }),
-            terser(),
-            filesize(),
-            visualizer({ filename: './dist/stats.html', open: false }),
+  // JS/TS Build
+  {
+    input: 'src/index.ts',
+    output: {
+      dir: DIST_DIR,
+      format: 'esm',
+      entryFileNames: '[name].mjs',
+      preserveModules: true,
+      preserveModulesRoot: 'src',
+      sourcemap: true,
+    },
+    plugins: [
+      clear({ targets: [DIST_DIR], watch: true }),
+      aliasConfig,
+      url({
+        include: [
+          '**/*.svg',
+          '**/*.png',
+          '**/*.jpg',
+          '**/*.gif',
+          '**/*.woff2',
+          '**/*.woff',
+          '**/*.ttf',
         ],
-        external: ['react', 'react-dom', 'react/jsx-runtime'],
-        treeshake: {
-            moduleSideEffects: false,
-            propertyReadSideEffects: false,
-        },
+        limit: 8192, // inline files < 8kb
+        emitFiles: true,
+        // Note: not using extname to keep original extensions since it's a .mjs extension
+        fileName: '[dirname][name]',
+      }),
+      css({ minify: true }),
+      peerDepsExternal(),
+      resolve({ extensions: ['.js', '.jsx', '.ts', '.tsx'] }),
+      commonjs(),
+      typescript({
+        clean: true,
+        tsconfig: 'tsconfig.build.json',
+        useTsconfigDeclarationDir: true,
+      }),
+      terser(),
+      filesize(),
+      visualizer({ filename: './temp/stats.html', open: false }),
+    ],
+    external: ['react', 'react-dom', 'react/jsx-runtime'],
+    treeshake: {
+      moduleSideEffects: false,
+      propertyReadSideEffects: false,
     },
-    // Type Declarations
-    {
-        input: 'src/types/index.d.ts',
-        output: {
-            dir: DIST_DIR,
-            format: 'esm',
-            preserveModules: true,
-            preserveModulesRoot: 'src',
-            entryFileNames: '[name].ts',
-        },
-        plugins: [aliasConfig, dts()],
+  },
+  // Type Declarations
+  {
+    input: 'src/types/index.d.ts',
+    output: {
+      dir: DIST_DIR,
+      format: 'esm',
+      preserveModules: true,
+      preserveModulesRoot: 'src',
+      entryFileNames: '[name].ts',
     },
+    plugins: [aliasConfig, dts()],
+  },
 ];
