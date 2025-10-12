@@ -105,6 +105,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      # Download the build artifact from the build job so we don't need to rebuild
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
@@ -112,23 +113,23 @@ jobs:
           path: dist/
 
       # display dist directory contents for debugging
-      - name: Show dist directory contents (debug)
+      - name: Show dist directory contents (DEBUG)
         run: ls -l dist/
 
       - name: Debug tags
         run: git tag -l | sort -V
 
-      - name: Validate NPM Token
+      - name: Validate NPM Token (DEBUG)
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "Token length: $(echo $NPM_TOKEN | wc -c)" 
           npm whoami --registry=https://registry.npmjs.org/ 
       
-      - name: Debug last release
+      - name: Debug last and release version (DEBUG)
         run: npx semantic-release --dry-run --no-ci | grep -E "(lastRelease|nextRelease)"
       - name: Debug current commit
-        run: git rev-parse HEAD && git log --oneline -5
+        run: git rev-parse HEAD && git log --oneline -5 (DEBUG)
 
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
