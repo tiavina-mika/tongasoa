@@ -115,6 +115,9 @@ jobs:
       - name: Show dist directory contents (debug)
         run: ls -l dist/
 
+      - name: Debug tags
+        run: git tag -l | sort -V
+
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
         env:
