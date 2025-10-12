@@ -130,13 +130,16 @@ jobs:
       - name: Show if .npmrc is created (DEBUG)
         run: ls -l .npmrc
 
-      - name: Validate NPM Token (DEBUG)
+      - name: Validate NPM Token (DEBUG)  # Garde tes debugs
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "Token length: $(echo -n $NPM_TOKEN | wc -c)"
-          npm whoami --registry=https://registry.npmjs.org/ 
-      
+          if npm whoami --registry=https://registry.npmjs.org/ > /dev/null 2>&1; then
+            echo "NPM Token: VALID"
+          else
+            echo "NPM Token: INVALID"
+          fi
       - name: Debug current commit (DEBUG)
         run: git rev-parse HEAD && git log --oneline -5
 
