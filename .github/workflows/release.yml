@@ -123,7 +123,7 @@ jobs:
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          echo "Token length: $(echo $NPM_TOKEN | wc -c)" 
+          echo "Token length: $(echo -n $NPM_TOKEN | wc -c)"
           npm whoami --registry=https://registry.npmjs.org/ 
       
       - name: Debug last and release version (DEBUG)
