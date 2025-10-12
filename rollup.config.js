@@ -60,6 +60,7 @@ export default [
       }),
       terser(),
       filesize(),
+      // Show bundle size information in a visual HTML file
       visualizer({ filename: './temp/stats.html', open: false }),
     ],
     external: ['react', 'react-dom', 'react/jsx-runtime'],
