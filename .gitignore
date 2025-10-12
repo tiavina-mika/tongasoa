@@ -32,3 +32,6 @@ dist-ssr
 *.sw?
 .yarn/cache
 coverage
+
+# for rollup vizualizer
+.temp
