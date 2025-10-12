@@ -136,8 +136,8 @@ jobs:
           echo "Token length: $(echo -n $NPM_TOKEN | wc -c)"
           npm whoami --registry=https://registry.npmjs.org/ 
       
-      - name: Debug current commit
-        run: git rev-parse HEAD && git log --oneline -5 (DEBUG)
+      - name: Debug current commit (DEBUG)
+        run: git rev-parse HEAD && git log --oneline -5
 
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
