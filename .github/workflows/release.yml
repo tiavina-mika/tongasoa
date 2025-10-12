@@ -117,6 +117,13 @@ jobs:
 
       - name: Debug tags
         run: git tag -l | sort -V
+
+      - name: Validate NPM Token
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "Token length: $(echo $NPM_TOKEN | wc -c)" 
+          npm whoami --registry=https://registry.npmjs.org/ 
       
       - name: Debug last release
         run: npx semantic-release --dry-run --no-ci | grep -E "(lastRelease|nextRelease)"
