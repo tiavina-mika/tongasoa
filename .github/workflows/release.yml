@@ -119,9 +119,19 @@ jobs:
       - name: Debug tags
         run: git tag -l | sort -V
 
-      - name: Validate NPM Token (DEBUG)
+      - name: Configure npm
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+          cat .npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Show if .npmrc is created (DEBUG)
+        run: ls -l .npmrc
+
+      - name: Validate NPM Token (DEBUG)
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           echo "Token length: $(echo -n $NPM_TOKEN | wc -c)"
           npm whoami --registry=https://registry.npmjs.org/ 
