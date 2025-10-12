@@ -67,13 +67,12 @@ jobs:
     # Semantic-release needs write permissions to create releases
     # and to comment on issues and pull requests
     permissions:
-      contents: write # to be able to publish a GitHub release
+      contents: write # for tags and commits
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC for npm provenance
     needs: build
     steps:
-
       - name: Checkout code
         uses: actions/checkout@v4
         with:
