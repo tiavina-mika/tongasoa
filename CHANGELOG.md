@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1 (2025-10-13)
+
+* fix(version): package version ([62cf981](https://github.com/tiavina-mika/tongasoa/commit/62cf981))
+
 ## 1.0.0 (2025-10-13)
 
 * add image ([4d1294f](https://github.com/tiavina-mika/tongasoa/commit/4d1294f))
