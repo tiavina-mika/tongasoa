@@ -15,6 +15,7 @@ import filesize from 'rollup-plugin-filesize'; // Ajout du plugin filesize
 const SRC_DIR = path.resolve(process.cwd(), 'src');
 const DIST_DIR = 'dist';
 
+// Replace '@' in imports with the src directory
 const aliasConfig = alias({
   entries: [{ find: '@', replacement: SRC_DIR }],
 });
