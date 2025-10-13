@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.1.0 (2025-10-13)
+
+* feat: test version incrementation ([39f29fd](https://github.com/tiavina-mika/tongasoa/commit/39f29fd))
+* feat: trigger version up ([60ff998](https://github.com/tiavina-mika/tongasoa/commit/60ff998))
+
 ## 1.0.1 (2025-10-13)
 
 * fix(version): package version ([62cf981](https://github.com/tiavina-mika/tongasoa/commit/62cf981))
