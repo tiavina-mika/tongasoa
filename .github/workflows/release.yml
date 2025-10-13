@@ -120,6 +120,7 @@ jobs:
       - name: Debug tags
         run: git tag -l | sort -V
 
+      # Configure npm to use the NPM_TOKEN secret for authentication
       - name: Configure npm
         run: |
           echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
