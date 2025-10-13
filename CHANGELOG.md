@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 (2025-10-13)
+
+* Merge branch 'release' of https://github.com/tiavina-mika/tongasoa into release ([ade61d0](https://github.com/tiavina-mika/tongasoa/commit/ade61d0))
+* feat: force version upgrade ([50c87e8](https://github.com/tiavina-mika/tongasoa/commit/50c87e8))
+
 ## 1.1.0 (2025-10-13)
 
 * feat: test version incrementation ([39f29fd](https://github.com/tiavina-mika/tongasoa/commit/39f29fd))
