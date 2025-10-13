@@ -34,6 +34,7 @@ export default [
     plugins: [
       clear({ targets: [DIST_DIR], watch: true }),
       aliasConfig,
+      // Handle asset files
       url({
         include: [
           '**/*.svg',
