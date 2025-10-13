@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1 (2025-10-13)
+
+* fix(version): test minor version ([cb93756](https://github.com/tiavina-mika/tongasoa/commit/cb93756))
+
 ## 1.2.0 (2025-10-13)
 
 * Merge branch 'release' of https://github.com/tiavina-mika/tongasoa into release ([ade61d0](https://github.com/tiavina-mika/tongasoa/commit/ade61d0))
