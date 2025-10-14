@@ -8,6 +8,8 @@ on:
     types: [opened, synchronize, reopened, edited]
     branches:
       - release
+      - main
+      - feat/*
 
 jobs:
   commitlint:
