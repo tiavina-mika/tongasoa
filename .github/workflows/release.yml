@@ -144,6 +144,7 @@ jobs:
       - name: Show 5 most recent commits (DEBUG)
         run: git rev-parse HEAD && git log --oneline -5
 
+
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
         env:
