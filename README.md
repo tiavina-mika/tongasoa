@@ -2,15 +2,13 @@
 
 **Tongasoa** means "welcome" in Malagasy (the language of Madagascar).
 
-This project is a template for anyone who wants to create modern npm libraries without worrying about all the different configurations that usually take a lot of time to set up.
+This project is a template for anyone who wants to create npm libraries without worrying about all the different configurations that usually take a lot of time to set up.
 
 It is a small demo app to showcase a modern npm package template with best practices for development, build, release, and CI/CD.
 
 ```bash
 yarn dev
 ```
-
-# 📦 Best Practices for Publishing an npm Package
 
 ## Installation
 
@@ -32,13 +30,13 @@ This project uses GitHub Actions for continuous integration and automated releas
 - **Release & publish** is triggered only when a pull request is merged into the `main` branch.
 - Commits and PR titles are validated for conventional format.
 - Version and changelog are updated automatically.
-- Publishing to npm is automated.
+- Publishing to npm is automated with semantic-release.
 
 See the workflow files in `.github/workflows/` for details.
 
 ## Development
 
-This project uses [Vite](https://vitejs.dev/) for fast local development and hot module replacement.
+This project uses [Vite](https://vitejs.dev/) for local development and hot module replacement.
 
 ## Commit Conventions
 
@@ -62,6 +60,4 @@ yarn build
 
 ## Changelog
 
-See the [CHANGELOG.md](./CHANGELOG.md) file for the history of changes.
-# tongasoa
-Typescript npm package template
+See the [CHANGELOG.md](https://github.com/tiavina-mika/tongasoa/blob/main/CHANGELOG.md) file for the history of changes.

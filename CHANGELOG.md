@@ -1,5 +1,17 @@
 # Changelog
 
+## 2.0.0 (2025-10-14)
+
+* BREAKING CHANGE: test major version upgrade ([23ba5ff](https://github.com/tiavina-mika/tongasoa/commit/23ba5ff))
+* feat!: test and triggers breaking changes ([d69dc75](https://github.com/tiavina-mika/tongasoa/commit/d69dc75))
+* feat!: triggers breaking change ([9778b44](https://github.com/tiavina-mika/tongasoa/commit/9778b44))
+* Merge branch 'release' of https://github.com/tiavina-mika/tongasoa into release ([e7fe77a](https://github.com/tiavina-mika/tongasoa/commit/e7fe77a))
+
+
+### BREAKING CHANGE
+
+* just for test guys
+
 ## 1.2.1 (2025-10-13)
 
 * fix(version): test minor version ([cb93756](https://github.com/tiavina-mika/tongasoa/commit/cb93756))
