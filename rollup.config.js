@@ -60,6 +60,7 @@ export default [
         tsconfig: 'tsconfig.build.json',
         useTsconfigDeclarationDir: true,
       }),
+      // Minify the bundle for smaller file sizes
       terser(),
       // Analyzes the bundle size and displays it in the terminal
       filesize(),
