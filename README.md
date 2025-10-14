@@ -30,13 +30,13 @@ This project uses GitHub Actions for continuous integration and automated releas
 - **Release & publish** is triggered only when a pull request is merged into the `main` branch.
 - Commits and PR titles are validated for conventional format.
 - Version and changelog are updated automatically.
-- Publishing to npm is automated.
+- Publishing to npm is automated with semantic-release.
 
 See the workflow files in `.github/workflows/` for details.
 
 ## Development
 
-This project uses [Vite](https://vitejs.dev/) for fast local development and hot module replacement.
+This project uses [Vite](https://vitejs.dev/) for local development and hot module replacement.
 
 ## Commit Conventions
 
