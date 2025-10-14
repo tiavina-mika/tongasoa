@@ -2,15 +2,13 @@
 
 **Tongasoa** means "welcome" in Malagasy (the language of Madagascar).
 
-This project is a template for anyone who wants to create modern npm libraries without worrying about all the different configurations that usually take a lot of time to set up.
+This project is a template for anyone who wants to create npm libraries without worrying about all the different configurations that usually take a lot of time to set up.
 
 It is a small demo app to showcase a modern npm package template with best practices for development, build, release, and CI/CD.
 
 ```bash
 yarn dev
 ```
-
-# 📦 Best Practices for Publishing an npm Package
 
 ## Installation
 
@@ -62,6 +60,4 @@ yarn build
 
 ## Changelog
 
-See the [CHANGELOG.md](./CHANGELOG.md) file for the history of changes.
-# tongasoa
-Typescript npm package template
+See the [CHANGELOG.md](https://github.com/tiavina-mika/tongasoa/blob/main/CHANGELOG.md) file for the history of changes.
