@@ -61,6 +61,7 @@ export default [
         useTsconfigDeclarationDir: true,
       }),
       terser(),
+      // Analyzes the bundle size and displays it in the terminal
       filesize(),
       // Show bundle size information in a visual HTML file
       visualizer({ filename: './temp/stats.html', open: false }),

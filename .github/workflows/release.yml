@@ -61,7 +61,6 @@ jobs:
           # Using compression-level 0 to speed up the upload process
           compression-level: 0
 
-
   # Release job to publish the package to NPM
   release:
     runs-on: ubuntu-latest
