@@ -2,6 +2,12 @@
 
 ## 1.0.1 (2025-10-14)
 
+* chore(release): 1.0.1 [skip ci] ([0eb3edf](https://github.com/tiavina-mika/tongasoa/commit/0eb3edf))
+* fix: version ([29c36ef](https://github.com/tiavina-mika/tongasoa/commit/29c36ef))
+* fix: version ([7b6b2a3](https://github.com/tiavina-mika/tongasoa/commit/7b6b2a3))
+
+## 1.0.1 (2025-10-14)
+
 * fix: version ([7b6b2a3](https://github.com/tiavina-mika/tongasoa/commit/7b6b2a3))
 
 ## 1.0.0 (2025-10-14)
