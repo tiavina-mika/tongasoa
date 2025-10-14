@@ -149,7 +149,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npx semantic-release --tag-format 3.0.1
+        run: npx semantic-release
 
       # Optional: Show the NPM package link after publishing
       - name: Show NPM package link (DEBUG)
