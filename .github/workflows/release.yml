@@ -117,7 +117,7 @@ jobs:
       - name: Show dist directory contents (DEBUG)
         run: ls -l dist/
 
-      - name: Debug tags
+      - name: Show existing git tags (DEBUG)
         run: git tag -l | sort -V
 
       # Configure npm to use the NPM_TOKEN secret for authentication
@@ -141,7 +141,7 @@ jobs:
           else
             echo "NPM Token: INVALID"
           fi
-      - name: Debug current commit (DEBUG)
+      - name: Show 5 most recent commits (DEBUG)
         run: git rev-parse HEAD && git log --oneline -5
 
       # Publish the package to NPM using semantic-release
