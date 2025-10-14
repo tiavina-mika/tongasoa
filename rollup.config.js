@@ -15,6 +15,7 @@ import filesize from 'rollup-plugin-filesize'; // Ajout du plugin filesize
 const SRC_DIR = path.resolve(process.cwd(), 'src');
 const DIST_DIR = 'dist';
 
+// Replace '@' in imports with the src directory
 const aliasConfig = alias({
   entries: [{ find: '@', replacement: SRC_DIR }],
 });
@@ -34,6 +35,7 @@ export default [
     plugins: [
       clear({ targets: [DIST_DIR], watch: true }),
       aliasConfig,
+      // Handle asset files
       url({
         include: [
           '**/*.svg',
@@ -60,6 +62,7 @@ export default [
       }),
       terser(),
       filesize(),
+      // Show bundle size information in a visual HTML file
       visualizer({ filename: './temp/stats.html', open: false }),
     ],
     external: ['react', 'react-dom', 'react/jsx-runtime'],

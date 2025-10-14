@@ -61,6 +61,7 @@ jobs:
           # Using compression-level 0 to speed up the upload process
           compression-level: 0
 
+
   # Release job to publish the package to NPM
   release:
     runs-on: ubuntu-latest
@@ -105,6 +106,7 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      # Download the build artifact from the build job so we don't need to rebuild
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
@@ -112,19 +114,43 @@ jobs:
           path: dist/
 
       # display dist directory contents for debugging
-      - name: Show dist directory contents (debug)
+      - name: Show dist directory contents (DEBUG)
         run: ls -l dist/
 
       - name: Debug tags
         run: git tag -l | sort -V
 
+      # Configure npm to use the NPM_TOKEN secret for authentication
+      - name: Configure npm
+        run: |
+          echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' > .npmrc
+          cat .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Show if .npmrc is created (DEBUG)
+        run: ls -l .npmrc
+
+      - name: Validate NPM Token (DEBUG)  # Garde tes debugs
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "Token length: $(echo -n $NPM_TOKEN | wc -c)"
+          if npm whoami --registry=https://registry.npmjs.org/ > /dev/null 2>&1; then
+            echo "NPM Token: VALID"
+          else
+            echo "NPM Token: INVALID"
+          fi
+      - name: Debug current commit (DEBUG)
+        run: git rev-parse HEAD && git log --oneline -5
+
       # Publish the package to NPM using semantic-release
       - name: Publish package on NPM 📦
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
 
       # Optional: Show the NPM package link after publishing
-      - name: Show NPM package link
+      - name: Show NPM package link (DEBUG)
         run: echo "Published to NPM 🚀- https://www.npmjs.com/package/${{ github.event.repository.name }}"
