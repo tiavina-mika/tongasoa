@@ -1,5 +1,15 @@
 # Changelog
 
+## 3.0.0 (2025-10-14)
+
+* Merge branch 'main' into release ([9af2a40](https://github.com/tiavina-mika/tongasoa/commit/9af2a40))
+* Release (#39) ([efeb885](https://github.com/tiavina-mika/tongasoa/commit/efeb885)), closes [#39](https://github.com/tiavina-mika/tongasoa/issues/39)
+
+
+### BREAKING CHANGE
+
+* test major version upgrade
+
 ## 2.0.0 (2025-10-14)
 
 * BREAKING CHANGE: test major version upgrade ([23ba5ff](https://github.com/tiavina-mika/tongasoa/commit/23ba5ff))
