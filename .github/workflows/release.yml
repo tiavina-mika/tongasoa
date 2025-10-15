@@ -9,9 +9,16 @@ on:
     branches:
       - main
 
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+    # Only trigger if the PR is merged (handled at job/step level)
+
 jobs:
   # Build the project after commit linting is successful
   build:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
