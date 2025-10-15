@@ -5,14 +5,10 @@ name: Release & Publish
 run-name: Release & publish to npm by ${{ github.actor }} 🚀
 
 on:
-  # push:
-  #   branches:
-  #     - main
-
-  pull_request:
-    types: [closed]
+  push:
     branches:
       - main
+
     # Only trigger if the PR is merged (handled at job/step level)
 
 jobs:
