@@ -12,7 +12,6 @@ import { terser } from 'rollup-plugin-terser';
 import { visualizer } from 'rollup-plugin-visualizer';
 import filesize from 'rollup-plugin-filesize'; // Ajout du plugin filesize
 
-// Define paths
 const SRC_DIR = path.resolve(process.cwd(), 'src');
 const DIST_DIR = 'dist';
 
