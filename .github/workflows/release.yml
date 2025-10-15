@@ -5,9 +5,9 @@ name: Release & Publish
 run-name: Release & publish to npm by ${{ github.actor }} 🚀
 
 on:
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
 
   pull_request:
     types: [closed]
