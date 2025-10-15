@@ -10,6 +10,7 @@ on:
       - release
       - main
       - feat/*
+      - fix/*
 
 jobs:
   commitlint:
