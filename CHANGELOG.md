@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.0.1 (2025-10-15)
+
+* fix(ci): test version upgrade ([b0d1dad](https://github.com/tiavina-mika/tongasoa/commit/b0d1dad))
+
 ## 1.0.0 (2025-10-15)
 
 * add image ([4d1294f](https://github.com/tiavina-mika/tongasoa/commit/4d1294f))
