@@ -1,5 +1,24 @@
 # Changelog
 
+## 3.1.0 (2025-10-16)
+
+* docs: add docs ([7d1325c](https://github.com/tiavina-mika/tongasoa/commit/7d1325c))
+* feat: fix file entry import ([e3fad66](https://github.com/tiavina-mika/tongasoa/commit/e3fad66))
+* feat: test pr v2 ([f6400bf](https://github.com/tiavina-mika/tongasoa/commit/f6400bf))
+* fix(ci): release workflow ([7a20010](https://github.com/tiavina-mika/tongasoa/commit/7a20010))
+* fix(ci): remove push triggers ([38f6d4b](https://github.com/tiavina-mika/tongasoa/commit/38f6d4b))
+* fix(ci): test pr (#47) ([3b57adb](https://github.com/tiavina-mika/tongasoa/commit/3b57adb)), closes [#47](https://github.com/tiavina-mika/tongasoa/issues/47)
+* fix(ci): trigger build ([65de0f7](https://github.com/tiavina-mika/tongasoa/commit/65de0f7))
+* fix(ci): use main branch as release branch ([891463d](https://github.com/tiavina-mika/tongasoa/commit/891463d))
+* test: first install ([87f01d7](https://github.com/tiavina-mika/tongasoa/commit/87f01d7))
+* test: install app ([784a3d2](https://github.com/tiavina-mika/tongasoa/commit/784a3d2))
+* test: install the lib ([15978d1](https://github.com/tiavina-mika/tongasoa/commit/15978d1))
+* test: install yarn ([473f4cf](https://github.com/tiavina-mika/tongasoa/commit/473f4cf))
+* test: setup ([c4aefab](https://github.com/tiavina-mika/tongasoa/commit/c4aefab))
+* test: setup ts ([f5208be](https://github.com/tiavina-mika/tongasoa/commit/f5208be))
+* test: update vite config for demos ([7054e3a](https://github.com/tiavina-mika/tongasoa/commit/7054e3a))
+* test: use lib ([3f4d646](https://github.com/tiavina-mika/tongasoa/commit/3f4d646))
+
 ## 3.0.1 (2025-10-15)
 
 * fix(ci): test version upgrade ([b0d1dad](https://github.com/tiavina-mika/tongasoa/commit/b0d1dad))
