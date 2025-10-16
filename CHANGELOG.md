@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.2 (2025-10-16)
+
+* fix: default import ([f3a7c98](https://github.com/tiavina-mika/tongasoa/commit/f3a7c98))
+* test: update demo ([618979e](https://github.com/tiavina-mika/tongasoa/commit/618979e))
+
 ## 3.1.1 (2025-10-16)
 
 * Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([94f644c](https://github.com/tiavina-mika/tongasoa/commit/94f644c))
