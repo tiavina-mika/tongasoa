@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.1.1 (2025-10-16)
+
+* Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([94f644c](https://github.com/tiavina-mika/tongasoa/commit/94f644c))
+* fix: lib import ([6b0148e](https://github.com/tiavina-mika/tongasoa/commit/6b0148e))
+* test: update lib for  demo ([8851c97](https://github.com/tiavina-mika/tongasoa/commit/8851c97))
+
 ## 3.1.0 (2025-10-16)
 
 * docs: add docs ([7d1325c](https://github.com/tiavina-mika/tongasoa/commit/7d1325c))
