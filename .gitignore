@@ -34,4 +34,4 @@ dist-ssr
 coverage
 
 # for rollup vizualizer
-.temp
+temp

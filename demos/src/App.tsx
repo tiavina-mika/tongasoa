@@ -1,4 +1,4 @@
-import Tongosoa from 'tongasoa';
+import { Tongosoa } from 'tongasoa';
 import './App.css';
 
 const App = () => {
