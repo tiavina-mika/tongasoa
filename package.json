@@ -15,7 +15,10 @@
   "module": "dist/index.mjs",
   "types": "dist/types/index.d.ts",
   "exports": {
-    ".": "./dist/index.mjs"
+    ".": {
+      "import": "./dist/index.mjs",
+      "types": "./dist/types/index.d.ts"
+    }
   },
   "files": [
     "dist"
