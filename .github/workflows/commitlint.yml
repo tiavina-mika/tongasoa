@@ -11,12 +11,6 @@ on:
       - main
       - feat/*
       - fix/*
-  push:
-    branches:
-      - release
-      - main
-      - feat/*
-      - fix/*
 
 jobs:
   commitlint:
