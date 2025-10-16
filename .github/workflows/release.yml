@@ -9,8 +9,6 @@ on:
     branches:
       - main
 
-    # Only trigger if the PR is merged (handled at job/step level)
-
 jobs:
   # Build the project after commit linting is successful
   build:
