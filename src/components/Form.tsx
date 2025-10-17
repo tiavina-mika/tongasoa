@@ -1,4 +1,6 @@
-import { useEffect, useState, type ChangeEvent, type FormEvent } from 'react';
+import {
+  useEffect, useState, type ChangeEvent, type FormEvent,
+} from 'react';
 
 import type { FormValues } from '@/types';
 
