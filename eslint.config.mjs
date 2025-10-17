@@ -55,7 +55,11 @@ const stylisticRules = {
       // e.g: import { a } from 'module';
       ImportDeclaration: { consistent: true, minProperties: 4 },
       // e.g: export { a } from 'module';
-      ExportDeclaration: { consistent: true, multiline: true, minProperties: 3 },
+      ExportDeclaration: {
+        consistent: true,
+        multiline: true,
+        minProperties: 3,
+      },
     },
   ],
   '@stylistic/object-curly-spacing': ['error', 'always'],
@@ -72,7 +76,11 @@ const stylisticRules = {
   '@stylistic/padding-line-between-statements': [
     'error',
     { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
-    { blankLine: 'any', prev: ['const', 'let', 'var'], next: ['const', 'let', 'var'] },
+    {
+      blankLine: 'any',
+      prev: ['const', 'let', 'var'],
+      next: ['const', 'let', 'var'],
+    },
   ],
   '@stylistic/comma-dangle': [
     'error',
@@ -187,7 +195,11 @@ const typescriptRules = {
     { selector: 'class', format: ['PascalCase'] },
     { selector: 'classProperty', format: ['camelCase', 'UPPER_CASE'] },
     { selector: 'classMethod', format: ['camelCase'] },
-    { selector: 'parameter', format: ['camelCase'], leadingUnderscore: 'allow' },
+    {
+      selector: 'parameter',
+      format: ['camelCase'],
+      leadingUnderscore: 'allow',
+    },
     { selector: 'function', format: ['camelCase'] },
     { selector: 'enum', format: ['PascalCase'] },
   ],
@@ -199,7 +211,11 @@ const jsxRules = {
   '@stylistic/jsx-one-expression-per-line': [1, { allow: 'non-jsx' }],
   '@stylistic/jsx-pascal-case': [
     1,
-    { allowAllCaps: false, allowNamespace: true, allowLeadingUnderscore: false },
+    {
+      allowAllCaps: false,
+      allowNamespace: true,
+      allowLeadingUnderscore: false,
+    },
   ],
   '@stylistic/jsx-equals-spacing': ['error', 'never'],
   '@stylistic/jsx-max-props-per-line': [
@@ -263,7 +279,10 @@ const generalRules = {
     },
   ],
   '@typescript-eslint/no-empty-object-type': 'off',
-  'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+  'react-refresh/only-export-components': [
+    'warn',
+    { allowConstantExport: true },
+  ],
   'prettier/prettier': ['off', { singleQuote: true }],
   '@typescript-eslint/no-explicit-any': 'off',
   'import/no-extraneous-dependencies': 'off',
@@ -308,24 +327,24 @@ const generalRules = {
   'no-unused-vars': 'off',
   '@eslint-community/eslint-comments/disable-enable-pair': 'off',
   camelcase: 'off',
-  'import/no-unresolved': 'off',  // Enforce resolution of imports
+  'import/no-unresolved': 'off', // Enforce resolution of imports
   // import order
   'import/order': [
     'error',
     {
       groups: [
-        'builtin',    // Node built-ins (if any)
-        'external',   // External libs (alphabetical)
-        'internal',   // Internal libs (alphabetical)
-        'type',       // Type imports (alphabetical)
-        'unknown',    // For CSS (custom)
-        ['parent', 'sibling', 'index'],  // Relative imports
+        'builtin', // Node built-ins (if any)
+        'external', // External libs (alphabetical)
+        'internal', // Internal libs (alphabetical)
+        'type', // Type imports (alphabetical)
+        'unknown', // For CSS (custom)
+        ['parent', 'sibling', 'index'], // Relative imports
       ],
-      'newlines-between': 'always',  // Empty lines (spaces) between groups
+      'newlines-between': 'always', // Empty lines (spaces) between groups
       alphabetize: {
         order: 'asc',
-        caseInsensitive: true,  // Fixed: Use 'caseInsensitive' instead of 'ignoreCase'
-        orderImportKind: 'ignore',  // Optional: Ignore kind ordering (default)
+        caseInsensitive: true, // Fixed: Use 'caseInsensitive' instead of 'ignoreCase'
+        orderImportKind: 'ignore', // Optional: Ignore kind ordering (default)
       },
       pathGroups: [
         // React and React-related before external
@@ -338,7 +357,7 @@ const generalRules = {
         {
           pattern: '^@/',
           group: 'internal',
-          position: 'before',  // Before other internals if needed
+          position: 'before', // Before other internals if needed
         },
         // CSS after types (assigned to unknown, before relatives)
         {
@@ -347,7 +366,7 @@ const generalRules = {
           position: 'before',
         },
       ],
-      pathGroupsExcludedImportTypes: ['react'],  // Exclude React from standard external sorting
+      pathGroupsExcludedImportTypes: ['react'], // Exclude React from standard external sorting
     },
   ],
 };
@@ -359,11 +378,11 @@ export default defineConfig(
       '**/node_modules/',
       '**/build',
       '**/vite.config.ts',
-      '**/.prettierrc.cjs',
+      '**/.prettierrc.mjs',
       '**/eslint.config.mjs',
       '**/demos/',
       '**/commitlint.config.mjs',
-      "**/jest.config.js",
+      '**/jest.config.js',
       '**rollup.config.js',
       '**/demos/',
       '**/dev/',
