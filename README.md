@@ -19,15 +19,22 @@ yarn add tongasoa
 ## Usage
 
 ```js
-import { Tongasoa } from 'tongasoa';
+import Tongasoa from 'tongasoa';
+
+const App = () => {
+  return (
+    <Tongasoa name="Mika" />
+  );
+};
+
+export default App;
 ```
 
 # CI/CD with GitHub Actions
 
 This project uses GitHub Actions for continuous integration and automated releases.
 
-- **Lint, test, and build** are run automatically on every push and pull request.
-- **Release & publish** is triggered only when a pull request is merged into the `main` branch.
+- **Lint, test, build and release** are run automatically on every push into the `main` branch.
 - Commits and PR titles are validated for conventional format.
 - Version and changelog are updated automatically.
 - Publishing to npm is automated with semantic-release.
@@ -54,7 +61,7 @@ yarn build
 ## Release & Publishing
 
 - Releases are automated via GitHub Actions and [semantic-release](https://semantic-release.gitbook.io/semantic-release/)
-- Publishing to npm only occurs when a PR is merged into the `main` branch
+- Publishing to npm only occurs when pushes are made into the `main` branch
 - Version and changelog are updated automatically
 - The changelog includes links to related PRs
 
