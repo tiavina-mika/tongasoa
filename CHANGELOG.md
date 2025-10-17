@@ -1,5 +1,16 @@
 # Changelog
 
+## 3.2.2 (2025-10-17)
+
+* lint ([84a97aa](https://github.com/tiavina-mika/tongasoa/commit/84a97aa))
+* lint code ([5e5a451](https://github.com/tiavina-mika/tongasoa/commit/5e5a451))
+* lint code ([b40a409](https://github.com/tiavina-mika/tongasoa/commit/b40a409))
+* lint code ([0a7b2a0](https://github.com/tiavina-mika/tongasoa/commit/0a7b2a0))
+* update demos lib ([5aa8575](https://github.com/tiavina-mika/tongasoa/commit/5aa8575))
+* update husky config ([1ab9aeb](https://github.com/tiavina-mika/tongasoa/commit/1ab9aeb))
+* update prettier ([924730d](https://github.com/tiavina-mika/tongasoa/commit/924730d))
+* fix: form ([47756fc](https://github.com/tiavina-mika/tongasoa/commit/47756fc))
+
 ## 3.2.1 (2025-10-17)
 
 * fix(ci): add lint to jobs ([bf2e7d5](https://github.com/tiavina-mika/tongasoa/commit/bf2e7d5))
