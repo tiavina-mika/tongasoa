@@ -1,14 +1,50 @@
-import type { TongasoaProps } from '../types';
-import '../styles/index.css';
-import Title from '@/components/Title';
-import reactLogo from '@/assets/react.svg';
+import { useEffect, useState } from 'react';
 
-const Tongasoa = ({ name = 'World' }: TongasoaProps) => {
+import type { FormValues, TongasoaProps } from '@/types';
+
+import logo from '@/assets/logo.svg';
+import DisplayProfileImage from '@/components/DisplayProfileImage';
+import Form from '@/components/Form';
+
+import '../styles/form.css';
+import '../styles/index.css';
+
+const Tongasoa = ({ name = 'World', isTitleVisible = true }: TongasoaProps) => {
+  const [values, setValues] = useState<FormValues>({ name: '' });
+
+  useEffect(() => {
+    setValues({ name });
+  }, [name]);
+
+  const handleRemovePhoto = () => {
+    setValues((prev) => ({ ...prev, photo: undefined }));
+  };
+
+  const handleSubmit = (newValues: FormValues) => {
+    setValues(newValues);
+  };
+
   return (
-    <div>
-      <img alt="Logo" src={reactLogo} width="60" />
-      <Title />
-      <h2>Welcome to {name}!</h2>
+    <div className="container">
+      {/* Title */}
+      {isTitleVisible && (
+        <h1 className="page-title">
+          <img alt="Logo" src={logo} width="60" />
+          <p>Tongasoa</p>
+        </h1>
+      )}
+
+      {/* Form */}
+      <Form values={values} onSubmit={handleSubmit} />
+      {/* Photo Preview */}
+      {values.photo && (
+        <DisplayProfileImage photo={values.photo} onRemovePhoto={handleRemovePhoto} />
+      )}
+      {/* Result Message */}
+      <p className="result-message">
+        Hello
+        <b> {values.name}</b>!
+      </p>
     </div>
   );
 };
