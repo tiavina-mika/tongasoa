@@ -6,7 +6,11 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
+  concurrency: ci-${{ github.ref }} 
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
