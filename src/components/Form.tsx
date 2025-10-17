@@ -6,6 +6,7 @@ type Props = {
   values: FormValues;
   onSubmit?: (values: Props['values']) => void;
 };
+
 const Form = ({ values, onSubmit }: Props) => {
   const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
   const [formValues, setFormValues] = useState<Props['values']>(values);
