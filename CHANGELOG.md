@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.1.6 (2025-10-17)
+
+* add dir to ignore ([58f27ab](https://github.com/tiavina-mika/tongasoa/commit/58f27ab))
+* lint dev ([e58363b](https://github.com/tiavina-mika/tongasoa/commit/e58363b))
+* Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([a34de9f](https://github.com/tiavina-mika/tongasoa/commit/a34de9f))
+* fix(lint): install and setup lint ([5abf9db](https://github.com/tiavina-mika/tongasoa/commit/5abf9db))
+* test: update demo ([5ea0c8e](https://github.com/tiavina-mika/tongasoa/commit/5ea0c8e))
+
 ## 3.1.5 (2025-10-16)
 
 * fix: exports order ([6e00b3e](https://github.com/tiavina-mika/tongasoa/commit/6e00b3e))
