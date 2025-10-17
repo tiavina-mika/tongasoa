@@ -382,7 +382,7 @@ export default defineConfig(
       '**/eslint.config.mjs',
       '**/demos/',
       '**/commitlint.config.mjs',
-      '**/jest.config.js',
+      '**/jest.config.cjs',
       '**rollup.config.js',
       '**/demos/',
       '**/dev/',
@@ -451,14 +451,5 @@ export default defineConfig(
       ...jestPlugin.configs['flat/recommended'].rules,
       'jest/prefer-expect-assertions': 'off',
     },
-  },
-  // {
-  //   settings: {
-  //     'import/resolver': {
-  //       typescript: {
-  //         project: './tsconfig.json',
-  //       }
-  //     },
-  //   },
-  // },
+  }
 );

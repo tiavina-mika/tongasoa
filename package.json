@@ -30,6 +30,7 @@
     "build:dev": "vite build --config vite.config.ts",
     "build": "rollup -c rollup.config.js",
     "test": "jest",
+    "test:ci": "jest --ci --coverage",
     "lint": "eslint . --ext .ts,.tsx --fix --max-warnings=1000",
     "precommit": "lint-staged",
     "prepare": "husky install"
@@ -84,6 +85,7 @@
     "rollup-plugin-typescript2": "^0.36.0",
     "rollup-plugin-visualizer": "^6.0.4",
     "semantic-release": "^24.2.9",
+    "ts-jest": "^29.4.5",
     "tslib": "^2.8.1",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.46.1",
