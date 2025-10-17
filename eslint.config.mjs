@@ -12,6 +12,7 @@ import comments from '@eslint-community/eslint-plugin-eslint-comments/configs';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import { defineConfig } from 'eslint/config';
 import cspellESLintPluginRecommended from '@cspell/eslint-plugin/recommended';
+import importPlugin from 'eslint-plugin-import';
 
 // --- Stylistic rules ---
 const stylisticRules = {
@@ -307,6 +308,48 @@ const generalRules = {
   'no-unused-vars': 'off',
   '@eslint-community/eslint-comments/disable-enable-pair': 'off',
   camelcase: 'off',
+  'import/no-unresolved': 'off',  // Enforce resolution of imports
+  // import order
+  'import/order': [
+    'error',
+    {
+      groups: [
+        'builtin',    // Node built-ins (if any)
+        'external',   // External libs (alphabetical)
+        'internal',   // Internal libs (alphabetical)
+        'type',       // Type imports (alphabetical)
+        'unknown',    // For CSS (custom)
+        ['parent', 'sibling', 'index'],  // Relative imports
+      ],
+      'newlines-between': 'always',  // Empty lines (spaces) between groups
+      alphabetize: {
+        order: 'asc',
+        caseInsensitive: true,  // Fixed: Use 'caseInsensitive' instead of 'ignoreCase'
+        orderImportKind: 'ignore',  // Optional: Ignore kind ordering (default)
+      },
+      pathGroups: [
+        // React and React-related before external
+        {
+          pattern: '^react($|/)',
+          group: 'external',
+          position: 'before',
+        },
+        // Internal with @ alias (treat as internal group)
+        {
+          pattern: '^@/',
+          group: 'internal',
+          position: 'before',  // Before other internals if needed
+        },
+        // CSS after types (assigned to unknown, before relatives)
+        {
+          pattern: '\\.(css|scss|sass|less)$',
+          group: 'unknown',
+          position: 'before',
+        },
+      ],
+      pathGroupsExcludedImportTypes: ['react'],  // Exclude React from standard external sorting
+    },
+  ],
 };
 
 export default defineConfig(
@@ -332,6 +375,7 @@ export default defineConfig(
   eslintPluginPrettierRecommended,
   cspellESLintPluginRecommended,
   comments.recommended,
+  importPlugin.flatConfigs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
   {
@@ -389,4 +433,13 @@ export default defineConfig(
       'jest/prefer-expect-assertions': 'off',
     },
   },
+  // {
+  //   settings: {
+  //     'import/resolver': {
+  //       typescript: {
+  //         project: './tsconfig.json',
+  //       }
+  //     },
+  //   },
+  // },
 );
