@@ -1,5 +1,17 @@
 # Changelog
 
+## 3.3.0 (2025-10-17)
+
+* Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([f43c598](https://github.com/tiavina-mika/tongasoa/commit/f43c598))
+* Update App.css ([fe0c255](https://github.com/tiavina-mika/tongasoa/commit/fe0c255))
+* Update App.tsx ([64aaf2e](https://github.com/tiavina-mika/tongasoa/commit/64aaf2e))
+* Update index.css ([63d886f](https://github.com/tiavina-mika/tongasoa/commit/63d886f))
+* Update install-state.gz ([fbd6d62](https://github.com/tiavina-mika/tongasoa/commit/fbd6d62))
+* Update package.json ([f80f5a9](https://github.com/tiavina-mika/tongasoa/commit/f80f5a9))
+* update precommit setup ([f2b638e](https://github.com/tiavina-mika/tongasoa/commit/f2b638e))
+* Update yarn.lock ([eb29bef](https://github.com/tiavina-mika/tongasoa/commit/eb29bef))
+* feat: use test ([56ec84a](https://github.com/tiavina-mika/tongasoa/commit/56ec84a))
+
 ## 3.2.2 (2025-10-17)
 
 * lint ([84a97aa](https://github.com/tiavina-mika/tongasoa/commit/84a97aa))
