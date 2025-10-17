@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.2.0 (2025-10-17)
+
+* Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([429c7be](https://github.com/tiavina-mika/tongasoa/commit/429c7be))
+* update eslint ([70fc17b](https://github.com/tiavina-mika/tongasoa/commit/70fc17b))
+* feat: update infos ([3e1c4c8](https://github.com/tiavina-mika/tongasoa/commit/3e1c4c8))
+
 ## 3.1.6 (2025-10-17)
 
 * add dir to ignore ([58f27ab](https://github.com/tiavina-mika/tongasoa/commit/58f27ab))
