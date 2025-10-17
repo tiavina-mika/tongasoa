@@ -7,6 +7,7 @@ type Props = {
   photo: FormValues['photo'];
   onRemovePhoto: () => void;
 };
+
 const DisplayProfileImage = ({ photo, onRemovePhoto }: Props) => {
   return (
     <div className="photo-preview">
