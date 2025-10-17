@@ -1302,7 +1302,7 @@ __metadata:
     globals: "npm:^16.4.0"
     react: "npm:^19.1.1"
     react-dom: "npm:^19.1.1"
-    tongasoa: "npm:^3.2.2"
+    tongasoa: "npm:^3.3.0"
     typescript: "npm:~5.9.3"
     typescript-eslint: "npm:^8.45.0"
     vite: "npm:^7.1.7"
@@ -2728,13 +2728,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tongasoa@npm:^3.2.2":
-  version: 3.2.2
-  resolution: "tongasoa@npm:3.2.2"
+"tongasoa@npm:^3.3.0":
+  version: 3.3.0
+  resolution: "tongasoa@npm:3.3.0"
   dependencies:
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
-  checksum: 10c0/11b79fa5b35d0a4e1a0024ae0edaa18f03a6a91481e2bcb42fd2f3f6f803bcc52256cd48fbea7bf4ccbfcefcf30d3ac03ce8d9416eccb86954069224c108ff74
+  checksum: 10c0/86986352e3863ba1373b662a282808aacb7e557ebe8037034a9115aa55ed17a5ffb14685b3fc5bde70dafbfbd72c9e31118958de613db74933781458f14d73be
   languageName: node
   linkType: hard
 
