@@ -13,7 +13,7 @@ const Tongasoa = ({ name = 'World', isTitleVisible = true }: TongasoaProps) => {
   const [values, setValues] = useState<FormValues>({ name: '' });
 
   useEffect(() => {
-    setValues({ name });
+    setValues((prev: FormValues) => ({ ...prev, name }));
   }, [name]);
 
   const handleRemovePhoto = () => {
@@ -38,7 +38,10 @@ const Tongasoa = ({ name = 'World', isTitleVisible = true }: TongasoaProps) => {
       <Form values={values} onSubmit={handleSubmit} />
       {/* Photo Preview */}
       {values.photo && (
-        <DisplayProfileImage photo={values.photo} onRemovePhoto={handleRemovePhoto} />
+        <DisplayProfileImage
+          photo={values.photo}
+          onRemovePhoto={handleRemovePhoto}
+        />
       )}
       {/* Result Message */}
       <p className="result-message">

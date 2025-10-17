@@ -10,6 +10,9 @@ type Props = {
 const Form = ({ values, onSubmit }: Props) => {
   const [isFormVisible, setIsFormVisible] = useState<boolean>(false);
   const [formValues, setFormValues] = useState<Props['values']>(values);
+  const [errors, setErrors] = useState<
+    Partial<Record<keyof FormValues, string>>
+  >({});
 
   useEffect(() => {
     setFormValues(values);
@@ -25,6 +28,18 @@ const Form = ({ values, onSubmit }: Props) => {
     }
 
     setFormValues((prev) => ({ ...prev, [name]: inputValue }));
+
+    // Simple validation example
+    if (name === 'name' && !inputValue) {
+      setErrors((prev) => ({ ...prev, name: 'Name is required' }));
+    } else {
+      setErrors((prev) => {
+        const newErrors = { ...prev };
+
+        delete newErrors[name as keyof FormValues];
+        return newErrors;
+      });
+    }
   };
 
   const handleClick = () => {
@@ -33,8 +48,12 @@ const Form = ({ values, onSubmit }: Props) => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
+
+    if (Object.keys(errors).length > 0) return;
+
     onSubmit?.(formValues);
     setIsFormVisible(false);
+    setErrors({});
   };
 
   if (!isFormVisible) {
@@ -47,20 +66,39 @@ const Form = ({ values, onSubmit }: Props) => {
 
   return (
     <div className="form-container">
-      <form className="person-form" style={{ marginTop: 16 }} onSubmit={handleSubmit}>
+      <form
+        className="person-form"
+        style={{ marginTop: 16 }}
+        onSubmit={handleSubmit}
+      >
         {/* name */}
         <div className="form-control">
           <label>Name</label>
-          <input required type="text" value={formValues?.name} onChange={handleChange('name')} />
+          <input
+            required
+            type="text"
+            value={formValues?.name}
+            onChange={handleChange('name')}
+          />
+          {errors.name && <span className="error">{errors.name}</span>}
         </div>
         {/* photo */}
         <div className="form-control">
           <label>Photo</label>
-          <input required accept="image/*" type="file" onChange={handleChange('photo')} />
+          <input
+            accept="image/*"
+            type="file"
+            onChange={handleChange('photo')}
+          />
+          {errors.photo && <span className="error">{errors.photo}</span>}
         </div>
         <div className="form-footer">
           <button type="submit">Validate</button>
-          <button className="cancel-button" type="button" onClick={() => setIsFormVisible(false)}>
+          <button
+            className="cancel-button"
+            type="button"
+            onClick={() => setIsFormVisible(false)}
+          >
             Cancel
           </button>
         </div>
