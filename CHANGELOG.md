@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.2.1 (2025-10-17)
+
+* fix(ci): add lint to jobs ([bf2e7d5](https://github.com/tiavina-mika/tongasoa/commit/bf2e7d5))
+
 ## 3.2.0 (2025-10-17)
 
 * Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([429c7be](https://github.com/tiavina-mika/tongasoa/commit/429c7be))
