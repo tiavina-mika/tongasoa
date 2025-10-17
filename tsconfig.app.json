@@ -26,7 +26,14 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
+    "noUncheckedSideEffectImports": true,
+    "strictNullChecks": true
   },
-  "include": ["src"]
+  "include": [
+    "src/**/*",
+    "dev/**/*",
+    "vite.config.ts",
+    "__tests__"
+  ],
+  "exclude": ["**/__tests__/**", "eslint.config.mjs", "jest.config.ts"]
 }
