@@ -35,3 +35,6 @@ coverage
 
 # for rollup vizualizer
 temp
+
+*storybook.log
+storybook-static

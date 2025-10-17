@@ -33,7 +33,9 @@
     "src/**/*",
     "dev/**/*",
     "vite.config.ts",
-    "__tests__/**/*"
+    "__tests__/**/*",
+    "stories/**/*",
+    ".storybook/**/*"
   ],
   "exclude": ["eslint.config.mjs", "jest.config.cjs"]
 }

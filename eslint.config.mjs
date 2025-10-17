@@ -4,6 +4,7 @@ import stylistic from '@stylistic/eslint-plugin';
 import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 import jestPlugin from 'eslint-plugin-jest';
+import storybook from "eslint-plugin-storybook";
 
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended';
 import preferArrowFunctions from 'eslint-plugin-prefer-arrow-functions';
@@ -387,7 +388,6 @@ export default defineConfig(
       '**/demos/',
       '**/dev/',
       '**/coverage/',
-      '**/coverage/',
     ],
   },
   jsxA11y.flatConfigs.recommended,
@@ -397,6 +397,7 @@ export default defineConfig(
   importPlugin.flatConfigs.recommended,
   ...tseslint.configs.recommendedTypeChecked,
   ...tseslint.configs.stylisticTypeChecked,
+  ...storybook.configs['flat/recommended'],
   {
     languageOptions: {
       globals: {
