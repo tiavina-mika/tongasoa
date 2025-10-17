@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.1.5 (2025-10-16)
+
+* fix: exports order ([6e00b3e](https://github.com/tiavina-mika/tongasoa/commit/6e00b3e))
+* test: update lib ([922fb41](https://github.com/tiavina-mika/tongasoa/commit/922fb41))
+
 ## 3.1.4 (2025-10-16)
 
 * fix: exports setup order ([3dd02ce](https://github.com/tiavina-mika/tongasoa/commit/3dd02ce))
