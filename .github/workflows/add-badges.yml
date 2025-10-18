@@ -28,6 +28,8 @@ jobs:
           repo_owner: ${{ github.event.repository.owner.login }}
         with:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          # Define the badges to add to the README.md file
+          # It uses shields.io and GitHub Actions badges
           badges: |
             [
               {
