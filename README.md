@@ -6,6 +6,10 @@ This project is a template for anyone who wants to create npm libraries without 
 
 It is a small demo app to showcase a modern npm package template with best practices for development, build, release, and CI/CD.
 
+<!-- [START BADGES] -->
+<!-- Please keep comment here to allow auto update -->
+<!-- [END BADGES] -->
+
 ```bash
 yarn dev
 ```
