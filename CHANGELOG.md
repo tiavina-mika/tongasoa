@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.4.1 (2025-10-18)
+
+* fix(version): test version with multiple commit 1 ([fc36199](https://github.com/tiavina-mika/tongasoa/commit/fc36199))
+* fix(version): test version with multiple commit 2 ([ccac37f](https://github.com/tiavina-mika/tongasoa/commit/ccac37f))
+
 ## 3.4.0 (2025-10-18)
 
 * deploy sb ([76df033](https://github.com/tiavina-mika/tongasoa/commit/76df033))
