@@ -25,6 +25,8 @@ concurrency:
 jobs:
   # Single deploy job since we're just deploying
   deploy:
+    # Run this job only if the previous workflow was successful
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
