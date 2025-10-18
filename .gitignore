@@ -33,6 +33,10 @@ dist-ssr
 .yarn/cache
 coverage
 
+# playwright
+/test-results
+/playwright-report
+
 # for rollup vizualizer
 temp
 
