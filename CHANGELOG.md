@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.9.0 (2025-10-18)
+
+* feat: add keywords to npm page ([4d54c2e](https://github.com/tiavina-mika/tongasoa/commit/4d54c2e))
+
 ## 3.8.0 (2025-10-18)
 
 * feat: update docs ([619683c](https://github.com/tiavina-mika/tongasoa/commit/619683c))
