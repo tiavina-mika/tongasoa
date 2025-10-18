@@ -60,7 +60,7 @@ const Form = ({ values, onSubmit }: Props) => {
 
   if (!isFormVisible) {
     return (
-      <button className="open-form-button" onClick={handleClick}>
+      <button className="open-form-button" data-testid="open-form-button" onClick={handleClick}>
         Update your profile
       </button>
     );
@@ -78,6 +78,7 @@ const Form = ({ values, onSubmit }: Props) => {
           <label>Name</label>
           <input
             required
+            data-testid="name-input"
             type="text"
             value={formValues?.name}
             onChange={handleChange('name')}
@@ -95,7 +96,7 @@ const Form = ({ values, onSubmit }: Props) => {
           {errors.photo && <span className="error">{errors.photo}</span>}
         </div>
         <div className="form-footer">
-          <button type="submit">Validate</button>
+          <button data-testid="submit-button" type="submit">Validate</button>
           <button
             className="cancel-button"
             type="button"

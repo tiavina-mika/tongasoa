@@ -1,5 +1,5 @@
 /* eslint-disable @cspell/spellchecker */
-import { transformNameToInitials } from '../src/utils/utils';
+import { transformNameToInitials } from '../../src/utils/utils';
 
 describe('transformNameToInitials', () => {
   it('returns initials for two words (first letter of each)', () => {

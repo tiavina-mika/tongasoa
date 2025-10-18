@@ -44,7 +44,7 @@ const Tongasoa = ({ name = 'World', isTitleVisible = true }: TongasoaProps) => {
         />
       )}
       {/* Result Message */}
-      <p className="result-message">
+      <p className="result-message" data-testid="result-message">
         Hello
         <b> {values.name}</b>
         !
