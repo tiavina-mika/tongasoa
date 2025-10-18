@@ -75,9 +75,10 @@ yarn build
 - Version and changelog are updated automatically
 - The changelog includes links to related PRs
 
-# Storybook
+# Testing
 
-This project includes Storybook for developing and showcasing UI components in isolation.
+This project use both Unit Tests with Jest and E2E tests with Playwright integrated with Storybook.
+Both testing strategies are integrated into the CI/CD pipeline via GitHub Actions for automation and reliability.
 
 [View Storybook](https://tiavina-mika.github.io/tongasoa)
 
