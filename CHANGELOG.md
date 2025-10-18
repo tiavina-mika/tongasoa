@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.6.0 (2025-10-18)
+
+* Add storybook link to the doc ([c252a49](https://github.com/tiavina-mika/tongasoa/commit/c252a49))
+* change storybook url ([90a5545](https://github.com/tiavina-mika/tongasoa/commit/90a5545))
+* feat: add badge to readme ([647aa3c](https://github.com/tiavina-mika/tongasoa/commit/647aa3c))
+
 ## 3.5.0 (2025-10-18)
 
 * feat: test multiple commits with different level ([235b9ab](https://github.com/tiavina-mika/tongasoa/commit/235b9ab))
