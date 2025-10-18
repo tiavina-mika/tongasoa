@@ -48,3 +48,6 @@ jobs:
           build_command: yarn build-storybook # default: npm run build-storybook
           path: storybook-static # default: dist/storybook
           checkout: false # default: true
+      - name: Display deployed URL
+        id: deployment
+        run: echo "page_url=https://${{ github.repository_owner }}.github.io/${{ github.repository }}" >> $GITHUB_OUTPUT
