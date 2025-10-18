@@ -1,5 +1,13 @@
 # Changelog
 
+## 3.6.1 (2025-10-18)
+
+* Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([5eb577e](https://github.com/tiavina-mika/tongasoa/commit/5eb577e))
+* Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([be4c818](https://github.com/tiavina-mika/tongasoa/commit/be4c818))
+* Update add-badges.yml ([3692cad](https://github.com/tiavina-mika/tongasoa/commit/3692cad))
+* docs: add badges [skip ci] ([96ba62f](https://github.com/tiavina-mika/tongasoa/commit/96ba62f))
+* fix: update readme ([7aa2b09](https://github.com/tiavina-mika/tongasoa/commit/7aa2b09))
+
 ## 3.6.0 (2025-10-18)
 
 * Add storybook link to the doc ([c252a49](https://github.com/tiavina-mika/tongasoa/commit/c252a49))
