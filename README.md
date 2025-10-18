@@ -8,6 +8,12 @@ It is a small demo app to showcase a modern npm package template with best pract
 
 <!-- [START BADGES] -->
 <!-- Please keep comment here to allow auto update -->
+[![NPM Version](https://img.shields.io/npm/v/tongasoa?style=flat-square)](https://www.npmjs.com/package/tongasoa)
+[![Language](https://img.shields.io/badge/language-TypeScript-blue.svg?style=flat-square)](https://www.typescriptlang.org)
+[![Build](https://github.com/tiavina-mika/tongasoa/actions/workflows/release.yml/badge.svg)](https://github.com/tiavina-mika/tongasoa/actions)
+[![Downloads](https://img.shields.io/npm/dm/tongasoa?style=flat-square)](https://www.npmjs.com/package/tongasoa)
+[![Contributors](https://img.shields.io/github/contributors/tiavina-mika/tongasoa?style=flat-square)](https://github.com/tiavina-mika/tongasoa/graphs/contributors)
+[![Storybook](https://img.shields.io/badge/Storybook-View%20Components-orange?style=flat-square&logo=storybook)](https://tiavina-mika.github.io/tongasoa)
 <!-- [END BADGES] -->
 
 ```bash
