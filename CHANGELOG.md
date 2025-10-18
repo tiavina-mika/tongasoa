@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.7.0 (2025-10-18)
+
+* Update .cspell.json ([8393224](https://github.com/tiavina-mika/tongasoa/commit/8393224))
+* Update .gitignore ([5db60ce](https://github.com/tiavina-mika/tongasoa/commit/5db60ce))
+* feat: add e2e with playwright ([0bfc4c5](https://github.com/tiavina-mika/tongasoa/commit/0bfc4c5))
+
 ## 3.6.1 (2025-10-18)
 
 * Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([5eb577e](https://github.com/tiavina-mika/tongasoa/commit/5eb577e))
