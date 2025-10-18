@@ -1,5 +1,9 @@
 # Changelog
 
+## 3.8.0 (2025-10-18)
+
+* feat: update docs ([619683c](https://github.com/tiavina-mika/tongasoa/commit/619683c))
+
 ## 3.7.0 (2025-10-18)
 
 * Update .cspell.json ([8393224](https://github.com/tiavina-mika/tongasoa/commit/8393224))
