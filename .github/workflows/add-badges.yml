@@ -1,6 +1,7 @@
 # This action use https://github.com/wow-actions/add-badges?tab=readme-ov-file to add badges to your README.md file.
 # The badges are added between the comments <!-- [START BADGES] --> and <!-- [END BADGES] --> in the README.md file.
 # Make sure these comments are present in your README.md file.
+# IMPORTANT: Make sure to add "write and read" permission for "Contents" in the workflow file to allow this action to update the README.md file.
 name: Add Badges
 
 on:
