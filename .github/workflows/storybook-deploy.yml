@@ -1,54 +1,50 @@
-# Deploy Storybook to GitHub Pages on every push to main
-name: Deploy Storybook to GitHub Pages
+# Simple workflow for deploying static content to GitHub Pages
+name: Deploy static content to Pages
 
 on:
-  push:
-    branches:
-      - main
+  # Triggers the workflow when the Release & Publish workflow is completed
+  workflow_run:
+    workflows: [Release & Publish]
+    types: [completed]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  concurrency: ci-${{ github.ref }} 
-  build-and-deploy:
+  # Single deploy job since we're just deploying
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
+      # Set up Node
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - name: Install Yarn 4
         run: corepack enable && corepack prepare yarn@4 --activate
-
-      - name: Restore Yarn cache
-        uses: actions/cache@v4
+      #👇 Add Storybook build and deploy to GitHub Pages as a step in the workflow
+      - uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
         with:
-          path: .yarn/install-state.gz
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: ${{ runner.os }}-yarn-
-          enableCrossOsArchive: true
-
-      - name: Install dependencies
-        run: yarn install --immutable
-
-      - name: Build Storybook
-        run: yarn build-storybook
-
-      - name: Deploy Storybook to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: storybook-static
-          clean: true
-          single-commit: true
-
-      - name: Log Storybook URL
-        run: |
-          echo "Storybook deployed at : https://tiavina-mika.github.io/tongasoa/"
+          install_command: yarn install # default: npm ci
+          build_command: yarn build-storybook # default: npm run build-storybook
+          path: storybook-static # default: dist/storybook
+          checkout: false # default: true

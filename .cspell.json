@@ -1,0 +1,22 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "autodocs",
+    "Autodocs",
+    "Mika",
+    "Tongasoa"
+  ],
+  "flagWords": [],
+  "ignorePaths": [
+    "package.json",
+    "yarn.lock",
+    "tsconfig.json",
+    "node_modules/**",
+    "dev/**",
+    "__tests__/**",
+    "demos/**",
+    "dist/**",
+    "build/**",
+  ]
+}

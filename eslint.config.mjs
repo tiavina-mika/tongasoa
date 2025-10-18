@@ -435,9 +435,7 @@ export default defineConfig(
       '@cspell/spellchecker': [
         'warn',
         {
-          cspell: {
-            ignoreWords: ['noopener', 'noreferrer', 'Tongasoa'],
-          },
+          configFile: new URL('./.cspell.json', import.meta.url).toString(),
         },
       ],
     },
