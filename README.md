@@ -16,10 +16,6 @@ It is a small demo app to showcase a modern npm package template with best pract
 [![Storybook](https://img.shields.io/badge/Storybook-View%20Components-orange?style=flat-square&logo=storybook)](https://tiavina-mika.github.io/tongasoa)
 <!-- [END BADGES] -->
 
-```bash
-yarn dev
-```
-
 ## Installation
 
 ```bash

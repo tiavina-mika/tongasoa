@@ -47,6 +47,17 @@
   },
   "license": "MIT",
   "packageManager": "yarn@4.10.3",
+  "keywords": [
+    "react",
+    "storybook",
+    "playwright",
+    "e2e-testing",
+    "rollup",
+    "npm-library",
+    "github-actions",
+    "ci-cd",
+    "jest"
+  ],
   "devDependencies": {
     "@chromatic-com/storybook": "4.1.1",
     "@commitlint/cli": "^20.1.0",
