@@ -44,21 +44,21 @@ This document explains the different environments in our project structure. It c
 - **Use Case**: Final artifact for deployment—lightweight, tree-shakable, and production-optimized.
 - **Notes**: `dist/` is git-ignored (`.gitignore`)—regenerated on each build. Includes `package.json` with exports pointing to built files.
 
-### 4. Example (User) Environment
+### 4. Demos (User) Environment
 - **Purpose**: Simulates the end-user experience—testing the published npm package in a separate app.
-- **Location**: `example/` directory (a standalone Vite/React/whatever app).
+- **Location**: `demos/` directory (a standalone Vite/React/whatever app).
 - **How to Use**:
   1. Install the local package (links to your built `dist/`):
      ```
-     cd example
+     cd demos
      yarn add ../  # Or npm install ../ for local dev linking
      ```
-  2. Import and use in `example/src/App.tsx`:
+  2. Import and use in `demos/src/App.tsx`:
      ```tsx
-     import { TongasoaComponent } from 'tongasoa';  // From your npm package
+     import Tongasoa from 'tongasoa';  // From your npm package
 
      function App() {
-       return <TongasoaComponent />;  // e.g., the button with updated redirection
+       return <Tongasoa />;  // e.g., the button with updated redirection
      }
      ```
   3. Run the example app:
