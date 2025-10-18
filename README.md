@@ -65,6 +65,14 @@ yarn build
 - Version and changelog are updated automatically
 - The changelog includes links to related PRs
 
+# Storybook
+
+This project includes Storybook for developing and showcasing UI components in isolation.
+
+[View Storybook](https://tiavina-mika.github.io/tongasoa)
+
 ## Changelog
 
 See the [CHANGELOG.md](https://github.com/tiavina-mika/tongasoa/blob/main/CHANGELOG.md) file for the history of changes.
+
+
