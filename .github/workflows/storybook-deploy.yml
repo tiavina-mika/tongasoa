@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+name: Deploy storybook to GitHub Pages
 
 on:
   # Triggers the workflow when the Release & Publish workflow is completed
