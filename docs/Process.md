@@ -29,6 +29,7 @@
 ## Result
 - New Version: 3.1.0 everywhere (Git, npm).
 - Changelog Updated: `## 3.1.0 (2025-10-15)\n### Features\n* change button redirection`.
+- `package.json` updated with version 3.1.0.
 - Config `.releaserc.json`: Custom rules for bumps, changelog groups, auto-publish.
 
 For debugging: Actions logs or `npx semantic-release --dry-run`.
