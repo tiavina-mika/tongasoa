@@ -1,5 +1,19 @@
 # Changelog
 
+## 3.4.0 (2025-10-18)
+
+* deploy sb ([76df033](https://github.com/tiavina-mika/tongasoa/commit/76df033))
+* Update install-state.gz ([648ec28](https://github.com/tiavina-mika/tongasoa/commit/648ec28))
+* Update package.json ([16c39af](https://github.com/tiavina-mika/tongasoa/commit/16c39af))
+* Update README.md ([b3aa0e4](https://github.com/tiavina-mika/tongasoa/commit/b3aa0e4))
+* Update yarn.lock ([0cceb36](https://github.com/tiavina-mika/tongasoa/commit/0cceb36))
+* Update yarn.lock ([3f1c176](https://github.com/tiavina-mika/tongasoa/commit/3f1c176))
+* feat: setup storybook ([27c511c](https://github.com/tiavina-mika/tongasoa/commit/27c511c))
+* feat: use storybook ([6e89d4c](https://github.com/tiavina-mika/tongasoa/commit/6e89d4c))
+* fix: stories ([8e696ab](https://github.com/tiavina-mika/tongasoa/commit/8e696ab))
+* fix: test ([0ca13b4](https://github.com/tiavina-mika/tongasoa/commit/0ca13b4))
+* fix(ci): sb ([2d84841](https://github.com/tiavina-mika/tongasoa/commit/2d84841))
+
 ## 3.3.0 (2025-10-17)
 
 * Merge branch 'main' of https://github.com/tiavina-mika/tongasoa ([f43c598](https://github.com/tiavina-mika/tongasoa/commit/f43c598))
