@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.5.0 (2025-10-18)
+
+* feat: test multiple commits with different level ([235b9ab](https://github.com/tiavina-mika/tongasoa/commit/235b9ab))
+* fix: test minor version update ([565fb5b](https://github.com/tiavina-mika/tongasoa/commit/565fb5b))
+* fix(docs): update commit lint ([1002f03](https://github.com/tiavina-mika/tongasoa/commit/1002f03))
+
 ## 3.4.1 (2025-10-18)
 
 * fix(version): test version with multiple commit 1 ([fc36199](https://github.com/tiavina-mika/tongasoa/commit/fc36199))
