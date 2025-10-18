@@ -16,7 +16,7 @@ const preview: Preview = {
       test: 'todo',
     },
     initialGlobals: {
-      viewport: { value: 'iphone14', isRotated: false },
+      viewport: { value: 'tablet', isRotated: false },
     },
     viewport: {
       options: INITIAL_VIEWPORTS,

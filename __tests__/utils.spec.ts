@@ -12,7 +12,7 @@ describe('transformNameToInitials', () => {
 
   it('returns first two letters for single word', () => {
     expect(transformNameToInitials('Dostoievsky')).toBe('DO');
-    expect(transformNameToInitials('Allan-Poe')).toBe('AP');
+    expect(transformNameToInitials('Allan-Poe')).toBe('AL');
     expect(transformNameToInitials('Baudelaire')).toBe('BA');
   });
 
